@@ -48,3 +48,7 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+
+src/app/(payload)/admin/importMap.js
+src/payload-types.ts
