@@ -16,14 +16,14 @@ const generateURL: GenerateURL<any> = ({ doc }) => {
   return doc?.slug ? `${url}/${doc.slug}` : url
 }
 
-// const generateDescription: GenerateURL<any> = ({ doc }) => {
-//   const url = getServerSideURL()
-//   return doc?.slug ? `${url}/${doc.slug}` : url
-// }
+const generateDescription: GenerateURL<any> = ({ doc }) => {
+  const url = getServerSideURL()
+  return doc?.slug ? `${url}/${doc.slug}` : url
+}
 
 export const seoPluginConfig = seoPlugin({
   collections: collectionsUsingSeoPlugins,
   generateTitle,
   generateURL,
-  // generateDescription,
+  generateDescription,
 })

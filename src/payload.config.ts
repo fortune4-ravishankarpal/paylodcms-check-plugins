@@ -1,4 +1,4 @@
-import { sqliteAdapter } from '@payloadcms/db-sqlite'
+import { postgresAdapter } from '@payloadcms/db-postgres'
 import sharp from 'sharp'
 import path from 'path'
 import { buildConfig, PayloadRequest } from 'payload'
@@ -51,10 +51,14 @@ export default buildConfig({
     },
   },
   editor: defaultLexical,
-  db: sqliteAdapter({
+
+  db: postgresAdapter({
     migrationDir: path.resolve(dirname, '../migrations'),
-    client: {
-      url: process.env.DATABASE_URL || '',
+    pool: {
+      connectionString: process.env.POSTGRES_URL,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     },
   }),
   collections: collections,
