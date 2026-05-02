@@ -12,7 +12,7 @@ import { translatorConfig } from './translator'
 import { redirectsConfig } from './redirect'
 import { auditFieldsConfig } from './audit'
 import { enhancedSidebarConfig } from './sidebar'
-// import { shadcnUiConfig } from './shadcn-ui'
+import { shadcnUiConfig } from './shadcn-ui'
 
 export const plugins: Plugin[] = [
   redirectsConfig,
@@ -24,7 +24,7 @@ export const plugins: Plugin[] = [
     collections: ['categories'],
     generateURL: (docs) => docs.reduce((url, doc) => `${url}/${doc.slug}`, ''),
   }),
-  // shadcnUiConfig,
+  shadcnUiConfig,
   seoPluginConfig,
   formBuilderPluginConfig,
   searchPlugin({

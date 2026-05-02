@@ -1,2 +1,167 @@
 @source "../../../node_modules/@payloadcmsdirectory/shadcn-ui";
-:root {@import "@payloadcmsdirectory/shadcn-ui/globals.css" layer(shadcn-base);}
+
+@layer shadcn-base {
+  :root {
+    /* Base colors */
+    --background: hsl(0 0% 100%);
+    --foreground: hsl(222 84% 5%);
+    --card: hsl(0 0% 100%);
+    --card-foreground: hsl(222 84% 5%);
+    --popover: hsl(0 0% 100%);
+    --popover-foreground: hsl(222 84% 5%);
+    --primary: hsl(222 47% 11%);
+    --primary-foreground: hsl(210 40% 98%);
+    --secondary: hsl(210 40% 96%);
+    --secondary-foreground: hsl(222 47% 11%);
+    --muted: hsl(210 40% 96%);
+    --muted-foreground: hsl(215 16% 47%);
+    --accent: hsl(210 40% 96%);
+    --accent-foreground: hsl(222 47% 11%);
+    --destructive: hsl(0 84% 60%);
+    --destructive-foreground: hsl(210 40% 98%);
+    --border: hsl(214 32% 91%);
+    --input: hsl(214 32% 91%);
+    --ring: hsl(222 84% 5%);
+    --radius: 0.5rem;
+
+    /* Layout variables */
+    --sidebar-width: 280px;
+    --sidebar-background: hsl(0 0% 98%);
+    --sidebar-foreground: hsl(222 84% 5%);
+    --sidebar-muted: hsl(215 16% 47%);
+    --sidebar-border: hsl(214 32% 91%);
+    --topbar-height: 64px;
+    --nav-height: 64px;
+    --gutter-h: 30px;
+    --error-color: hsl(0 84% 60%);
+    --success-color: hsl(142 76% 45%);
+    --warning-color: hsl(48 96% 47%);
+
+    /* Form variables */
+    --form-padding: 30px;
+    --form-margin: 30px;
+    --form-label-margin: 15px;
+    --form-field-margin: 30px;
+    --form-error-color: hsl(0 84% 60%);
+    --form-error-border: hsl(0 84% 60%);
+    --form-error-background: hsl(0 86% 97%);
+    --form-success-color: hsl(142 76% 45%);
+    --form-success-border: hsl(142 76% 45%);
+    --form-success-background: hsl(141 84% 97%);
+    --form-warning-color: hsl(48 96% 47%);
+    --form-warning-border: hsl(48 96% 47%);
+    --form-warning-background: hsl(48 96% 89%);
+
+    /* Button variables */
+    --btn-height: 38px;
+    --btn-radius: 4px;
+    --btn-padding: 0 15px;
+    --btn-margin: 5px;
+    --btn-font-size: 14px;
+    --btn-font-weight: 600;
+    --btn-line-height: 1.2;
+    --btn-transition: all 0.2s ease-in-out;
+  }
+
+  [data-theme='dark'] {
+    /* Base colors */
+    --background: hsl(222 84% 5%);
+    --foreground: hsl(210 40% 98%);
+    --card: hsl(222 84% 5%);
+    --card-foreground: hsl(210 40% 98%);
+    --popover: hsl(222 84% 5%);
+    --popover-foreground: hsl(210 40% 98%);
+    --primary: hsl(210 40% 98%);
+    --primary-foreground: hsl(222 47% 11%);
+    --secondary: hsl(217 33% 18%);
+    --secondary-foreground: hsl(210 40% 98%);
+    --muted: hsl(217 33% 18%);
+    --muted-foreground: hsl(215 20% 65%);
+    --accent: hsl(217 33% 18%);
+    --accent-foreground: hsl(210 40% 98%);
+    --destructive: hsl(0 63% 31%);
+    --destructive-foreground: hsl(210 40% 98%);
+    --border: hsl(217 33% 18%);
+    --input: hsl(217 33% 18%);
+    --ring: hsl(213 27% 84%);
+
+    /* Layout variables */
+    --sidebar-background: hsl(222 47% 11%);
+    --sidebar-foreground: hsl(210 40% 98%);
+    --sidebar-muted: hsl(215 20% 65%);
+    --sidebar-border: hsl(217 33% 18%);
+    --error-color: hsl(0 84% 60%);
+    --success-color: hsl(142 76% 45%);
+    --warning-color: hsl(48 96% 47%);
+
+    /* Form variables */
+    --form-error-color: hsl(0 84% 60%);
+    --form-error-border: hsl(0 84% 60%);
+    --form-error-background: hsl(0 63% 31%);
+    --form-success-color: hsl(142 76% 45%);
+    --form-success-border: hsl(142 76% 45%);
+    --form-success-background: hsl(142 76% 24%);
+    --form-warning-color: hsl(48 96% 47%);
+    --form-warning-border: hsl(48 96% 47%);
+    --form-warning-background: hsl(43 89% 29%);
+  }
+}
+
+@theme inline {
+  /* Base colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --border-radius: var(--radius);
+
+  /* Layout variables */
+  --layout-sidebar-width: var(--sidebar-width);
+  --layout-sidebar-background: var(--sidebar-background);
+  --layout-sidebar-foreground: var(--sidebar-foreground);
+  --layout-sidebar-muted: var(--sidebar-muted);
+  --layout-sidebar-border: var(--sidebar-border);
+  --layout-topbar-height: var(--topbar-height);
+  --layout-nav-height: var(--nav-height);
+  --layout-gutter-h: var(--gutter-h);
+  --layout-error: var(--error-color);
+  --layout-success: var(--success-color);
+  --layout-warning: var(--warning-color);
+
+  /* Form variables */
+  --form-error: var(--form-error-color);
+  --form-error-border: var(--form-error-border);
+  --form-error-bg: var(--form-error-background);
+  --form-success: var(--form-success-color);
+  --form-success-border: var(--form-success-border);
+  --form-success-bg: var(--form-success-background);
+  --form-warning: var(--form-warning-color);
+  --form-warning-border: var(--form-warning-border);
+  --form-warning-bg: var(--form-warning-background);
+}
+
+/* Component styles */
+.shadcn-component {
+  font-family: var(--font-sans);
+}
+
+/* Utility styles */
+.shadcn-util {
+  font-family: var(--font-sans);
+}
+
