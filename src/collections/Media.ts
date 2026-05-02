@@ -30,6 +30,10 @@ export const Media: CollectionConfig = {
       //required: true,
     },
     {
+      name: 'blurDataUrl',
+      type: 'text',
+    },
+    {
       name: 'caption',
       type: 'richText',
       editor: lexicalEditor({

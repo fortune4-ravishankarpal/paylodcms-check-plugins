@@ -8,6 +8,7 @@ import { beforeSyncWithSearch } from '@/search/beforeSync'
 
 import { seoPluginConfig } from './seo'
 import { formBuilderPluginConfig } from './form-builder'
+import { gatekeeperPluginConfig } from './getKeeper'
 // import { shadcnUiConfig } from './shadcn-ui'
 
 export const plugins: Plugin[] = [
@@ -33,6 +34,7 @@ export const plugins: Plugin[] = [
       },
     },
   }),
+  gatekeeperPluginConfig,
   nestedDocsPlugin({
     collections: ['categories'],
     generateURL: (docs) => docs.reduce((url, doc) => `${url}/${doc.slug}`, ''),

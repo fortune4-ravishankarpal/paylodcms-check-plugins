@@ -125,6 +125,9 @@ importers:
       payload:
         specifier: 3.84.1
         version: 3.84.1(graphql@16.13.2)(typescript@5.7.3)
+      payload-gatekeeper:
+        specifier: ^1.1.0
+        version: 1.1.0(@payloadcms/ui@3.84.1(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.3(@babel/core@7.29.0)(@playwright/test@1.58.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.77.4))(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.7.3))(@types/react@19.2.14)(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       pg:
         specifier: ^8.20.0
         version: 8.20.0
@@ -5049,6 +5052,14 @@ packages:
 
   pathe@2.0.3:
     resolution: {integrity: sha512-WUjGcAqP1gQacoQe+OBJsFA7Ld4DyXuUIjZ5cc75cLHvJ7dtNsTugphxIADwspS+AraAUePCKrSVtPLFj/F88w==}
+
+  payload-gatekeeper@1.1.0:
+    resolution: {integrity: sha512-VPav+aum42GICM0n524vMFZGOCjZB8W5R7jkGvf3A8Nj3mrPmTwBBfo/HDS47T9PZdylxoxcFBisejNOCnka4w==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      '@payloadcms/ui': '>=3.0.0 <4.0.0'
+      payload: '>=3.0.0 <4.0.0'
+      react: '>=19.0.0 <20.0.0'
 
   payload@3.84.1:
     resolution: {integrity: sha512-+aPqqeYsffrzaYmsX/Qt+mHNgcTUyc5TIjjPOaMIrG6nDx6siZ2h9Gv3b3RKAVPt7PWkHI+ooEW3cQbwiDd99Q==}
@@ -11209,6 +11220,17 @@ snapshots:
   path-type@4.0.0: {}
 
   pathe@2.0.3: {}
+
+  payload-gatekeeper@1.1.0(@payloadcms/ui@3.84.1(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.3(@babel/core@7.29.0)(@playwright/test@1.58.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.77.4))(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.7.3))(@types/react@19.2.14)(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+    dependencies:
+      '@payloadcms/ui': 3.84.1(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.3(@babel/core@7.29.0)(@playwright/test@1.58.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.77.4))(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.7.3)
+      payload: 3.84.1(graphql@16.13.2)(typescript@5.7.3)
+      react: 19.2.4
+      react-select: 5.10.2(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+    transitivePeerDependencies:
+      - '@types/react'
+      - react-dom
+      - supports-color
 
   payload@3.84.1(graphql@16.13.2)(typescript@5.7.3):
     dependencies:
