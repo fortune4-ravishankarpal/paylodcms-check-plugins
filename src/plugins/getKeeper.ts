@@ -10,5 +10,5 @@ export const gatekeeperPluginConfig = gatekeeperPlugin({
     },
   },
   // Exclude collections from permission system entirely
-  //   excludeCollections: ['special-config'] // These use their own access control
+  // excludeCollections: ['special-config'] // These use their own access control
 })

@@ -1,18 +1,34 @@
 import { formBuilderPlugin } from '@payloadcms/plugin-form-builder'
 import { FixedToolbarFeature, HeadingFeature, lexicalEditor } from '@payloadcms/richtext-lexical'
 
+import { isAdmin, checkIsAdmin } from '@/access/isAdmin'
+
 export const formBuilderPluginConfig = formBuilderPlugin({
   fields: {
     payment: false,
   },
   formSubmissionOverrides: {
+    access: {
+      read: isAdmin,
+      create: () => true,
+      update: isAdmin,
+      delete: isAdmin,
+    },
     admin: {
       group: 'Content',
+      hidden: ({ user }) => !checkIsAdmin(user),
     },
   },
   formOverrides: {
+    access: {
+      read: isAdmin,
+      update: isAdmin,
+      delete: isAdmin,
+      create: isAdmin,
+    },
     admin: {
       group: 'Content',
+      hidden: ({ user }) => !checkIsAdmin(user),
     },
     fields: ({ defaultFields }) => {
       return defaultFields.map((field) => {
