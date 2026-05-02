@@ -11,12 +11,14 @@ import { gatekeeperPluginConfig } from './getKeeper'
 import { translatorConfig } from './translator'
 import { redirectsConfig } from './redirect'
 import { auditFieldsConfig } from './audit'
+import { enhancedSidebarConfig } from './sidebar'
 // import { shadcnUiConfig } from './shadcn-ui'
 
 export const plugins: Plugin[] = [
   redirectsConfig,
   translatorConfig,
   auditFieldsConfig,
+  enhancedSidebarConfig,
   gatekeeperPluginConfig,
   nestedDocsPlugin({
     collections: ['categories'],

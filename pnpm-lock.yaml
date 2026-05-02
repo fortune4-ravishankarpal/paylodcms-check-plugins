@@ -89,6 +89,9 @@ importers:
       '@t3-oss/env-nextjs':
         specifier: ^0.13.11
         version: 0.13.11(typescript@5.7.3)(zod@4.4.1)
+      '@veiag/payload-enhanced-sidebar':
+        specifier: ^0.3.1
+        version: 0.3.1(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))(react@19.2.4)
       axios:
         specifier: ^1.15.2
         version: 1.15.2
@@ -3161,6 +3164,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@veiag/payload-enhanced-sidebar@0.3.1':
+    resolution: {integrity: sha512-jf8fdpsvPkinj1kIgZVvXNZ1m6kPYgmdtJ2GAbDLwmhSkUqy3kIvgwGcf+GHTUaykeSgeg9YxpF7vHZ2bpEFWQ==}
+    engines: {node: ^18.20.2 || >=20.9.0, pnpm: ^9 || ^10}
+    peerDependencies:
+      payload: ^3.75.0
+
   '@vitejs/plugin-react@4.5.2':
     resolution: {integrity: sha512-QNVT3/Lxx99nMQWJWF7K4N6apUEuT0KlZA3mx/mVaoGj3smm/8rc8ezz15J1pcbcjDK0V15rpHetVfya08r76Q==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -4790,6 +4799,11 @@ packages:
 
   lucide-react@0.477.0:
     resolution: {integrity: sha512-yCf7aYxerFZAbd8jHJxjwe1j7jEMPptjnaOqdYeirFnEy85cNR3/L+o0I875CYFYya+eEVzZSbNuRk8BZPDpVw==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
+  lucide-react@0.556.0:
+    resolution: {integrity: sha512-iOb8dRk7kLaYBZhR2VlV1CeJGxChBgUthpSP8wom9jfj79qovgG6qcSdiy6vkoREKPnbUYzJsCn4o4PtG3Iy+A==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -9111,6 +9125,14 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.11.1':
     optional: true
 
+  '@veiag/payload-enhanced-sidebar@0.3.1(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))(react@19.2.4)':
+    dependencies:
+      '@payloadcms/translations': 3.84.1
+      lucide-react: 0.556.0(react@19.2.4)
+      payload: 3.84.1(graphql@16.13.2)(typescript@5.7.3)
+    transitivePeerDependencies:
+      - react
+
   '@vitejs/plugin-react@4.5.2(vite@7.3.2(@types/node@22.19.9)(jiti@2.6.1)(lightningcss@1.32.0)(sass@1.77.4)(tsx@4.21.0))':
     dependencies:
       '@babel/core': 7.29.0
@@ -10881,6 +10903,10 @@ snapshots:
       yallist: 3.1.1
 
   lucide-react@0.477.0(react@19.2.4):
+    dependencies:
+      react: 19.2.4
+
+  lucide-react@0.556.0(react@19.2.4):
     dependencies:
       react: 19.2.4
 

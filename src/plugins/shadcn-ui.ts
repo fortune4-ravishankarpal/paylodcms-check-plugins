@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url'
 
 const __filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(__filename)
-
+console.log('[ dirname ] >', dirname)
 export const shadcnUiConfig = shadcnPlugin({
   enableAll: true,
   customScssPath: path.resolve(dirname, '../app/(payload)/custom.scss'),
