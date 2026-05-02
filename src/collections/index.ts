@@ -1,15 +1,8 @@
 import { Categories } from './Categories'
-// import { Folders } from './Folders'
 import { Media } from './Media'
 import { Pages } from './Pages'
 import { Posts } from './Posts'
 import { Users } from './Users'
+import { AuditDemo } from './AuditDemo'
 
-export const collections = [
-  Pages,
-  Posts,
-  Media,
-  Categories,
-  Users,
-  //  Folders
-]
+export const collections = [Pages, Posts, Media, Categories, Users, AuditDemo]

@@ -10,11 +10,13 @@ import { formBuilderPluginConfig } from './form-builder'
 import { gatekeeperPluginConfig } from './getKeeper'
 import { translatorConfig } from './translator'
 import { redirectsConfig } from './redirect'
+import { auditFieldsConfig } from './audit'
 // import { shadcnUiConfig } from './shadcn-ui'
 
 export const plugins: Plugin[] = [
   redirectsConfig,
   translatorConfig,
+  auditFieldsConfig,
   gatekeeperPluginConfig,
   nestedDocsPlugin({
     collections: ['categories'],
