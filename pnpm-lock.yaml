@@ -140,6 +140,9 @@ importers:
       payload-gatekeeper:
         specifier: ^1.1.0
         version: 1.1.0(@payloadcms/ui@3.84.1(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.3(@babel/core@7.29.0)(@playwright/test@1.58.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.77.4))(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.7.3))(@types/react@19.2.14)(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      payload-plugin-comments:
+        specifier: ^1.0.2
+        version: 1.0.2
       pg:
         specifier: ^8.20.0
         version: 8.20.0
@@ -5142,6 +5145,9 @@ packages:
       '@payloadcms/ui': '>=3.0.0 <4.0.0'
       payload: '>=3.0.0 <4.0.0'
       react: '>=19.0.0 <20.0.0'
+
+  payload-plugin-comments@1.0.2:
+    resolution: {integrity: sha512-lqU8VhAJB0PrTeIRiWPsK+MqZeynEPWucUuV8cPmffyu5s6dFKn+MkXIn+WxE/Y2g1nQavdNmyOCvdNBv6GDmQ==}
 
   payload@3.84.1:
     resolution: {integrity: sha512-+aPqqeYsffrzaYmsX/Qt+mHNgcTUyc5TIjjPOaMIrG6nDx6siZ2h9Gv3b3RKAVPt7PWkHI+ooEW3cQbwiDd99Q==}
@@ -11393,6 +11399,8 @@ snapshots:
       - '@types/react'
       - react-dom
       - supports-color
+
+  payload-plugin-comments@1.0.2: {}
 
   payload@3.84.1(graphql@16.13.2)(typescript@5.7.3):
     dependencies:
