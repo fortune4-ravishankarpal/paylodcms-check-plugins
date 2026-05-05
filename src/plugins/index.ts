@@ -12,8 +12,8 @@ import { translatorConfig } from './translator'
 import { redirectsConfig } from './redirect'
 import { auditFieldsConfig } from './audit'
 import { enhancedSidebarConfig } from './sidebar'
-import { shadcnUiConfig } from './shadcn-ui'
-import comments from 'payload-plugin-comments'
+// import { shadcnUiConfig } from './shadcn-ui'
+// import comments from 'payload-plugin-comments'
 
 export const plugins: Plugin[] = [
   redirectsConfig,
@@ -21,12 +21,12 @@ export const plugins: Plugin[] = [
   auditFieldsConfig,
   enhancedSidebarConfig,
   gatekeeperPluginConfig,
-  comments(),
+  // comments(),
   nestedDocsPlugin({
     collections: ['categories'],
     generateURL: (docs) => docs.reduce((url, doc) => `${url}/${doc.slug}`, ''),
   }),
-  shadcnUiConfig,
+  // shadcnUiConfig,
   seoPluginConfig,
   formBuilderPluginConfig,
   searchPlugin({
