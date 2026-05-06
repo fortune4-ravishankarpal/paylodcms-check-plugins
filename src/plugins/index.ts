@@ -12,10 +12,12 @@ import { translatorConfig } from './translator'
 import { redirectsConfig } from './redirect'
 import { auditFieldsConfig } from './audit'
 import { enhancedSidebarConfig } from './sidebar'
+import { multiTenantConfig } from './multi-tenant'
 // import { shadcnUiConfig } from './shadcn-ui'
 // import comments from 'payload-plugin-comments'
 
 export const plugins: Plugin[] = [
+  multiTenantConfig,
   redirectsConfig,
   translatorConfig,
   auditFieldsConfig,
@@ -40,6 +42,7 @@ export const plugins: Plugin[] = [
         create: isAdmin,
       },
       admin: {
+        // @ts-ignore
         hidden: ({ user }) => !checkIsAdmin(user),
       },
       fields: ({ defaultFields }) => {

@@ -53,6 +53,9 @@ importers:
       '@payloadcms/plugin-import-export':
         specifier: ^3.84.1
         version: 3.84.1(@payloadcms/ui@3.84.1(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.3(@babel/core@7.29.0)(@playwright/test@1.58.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.77.4))(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.7.3))(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@payloadcms/plugin-multi-tenant':
+        specifier: ^3.84.1
+        version: 3.84.1(@payloadcms/ui@3.84.1(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.3(@babel/core@7.29.0)(@playwright/test@1.58.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.77.4))(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.7.3))(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))
       '@payloadcms/plugin-nested-docs':
         specifier: 3.84.1
         version: 3.84.1(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))
@@ -104,6 +107,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      country-state-city:
+        specifier: ^3.2.1
+        version: 3.2.1
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -1680,6 +1686,12 @@ packages:
 
   '@payloadcms/plugin-import-export@3.84.1':
     resolution: {integrity: sha512-AMYRmF723c4XF6QCDzydU6X/kjfPdd9sMSqcPjwhLmBZia3ZHkdFmn2V3eVnUpZZ5CTeQVIc8dacxPaIv2sb5w==}
+    peerDependencies:
+      '@payloadcms/ui': 3.84.1
+      payload: 3.84.1
+
+  '@payloadcms/plugin-multi-tenant@3.84.1':
+    resolution: {integrity: sha512-Aql0zsxv20f4PSMZqKMWnOieYv80I5HZKyA6h41A4T/w6Wki12P5GsZxh2wGDW9l/+RHkor8i6pMrxWj28UUaw==}
     peerDependencies:
       '@payloadcms/ui': 3.84.1
       payload: 3.84.1
@@ -3516,6 +3528,9 @@ packages:
 
   country-flag-icons@1.6.16:
     resolution: {integrity: sha512-HxJVoE/aaZGcUMx1vK/u9430uKGB3ODZDDZJJOqVJQzoHk5v42c0fSp1rk4tDfyr1dVOJjwxRiaBPliBMo2Liw==}
+
+  country-state-city@3.2.1:
+    resolution: {integrity: sha512-kxbanqMc6izjhc/EHkGPCTabSPZ2G6eG4/97akAYHJUN4stzzFEvQPZoF8oXDQ+10gM/O/yUmISCR1ZVxyb6EA==}
 
   croner@10.0.1:
     resolution: {integrity: sha512-ixNtAJndqh173VQ4KodSdJEI6nuioBWI0V1ITNKhZZsO0pEMoDxz539T4FTTbSZ/xIOSuDnzxLVRqBVSvPNE2g==}
@@ -7624,6 +7639,11 @@ snapshots:
       - react
       - react-dom
 
+  '@payloadcms/plugin-multi-tenant@3.84.1(@payloadcms/ui@3.84.1(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.3(@babel/core@7.29.0)(@playwright/test@1.58.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.77.4))(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.7.3))(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))':
+    dependencies:
+      '@payloadcms/ui': 3.84.1(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.3(@babel/core@7.29.0)(@playwright/test@1.58.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.77.4))(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.7.3)
+      payload: 3.84.1(graphql@16.13.2)(typescript@5.7.3)
+
   '@payloadcms/plugin-nested-docs@3.84.1(payload@3.84.1(graphql@16.13.2)(typescript@5.7.3))':
     dependencies:
       payload: 3.84.1(graphql@16.13.2)(typescript@5.7.3)
@@ -9536,6 +9556,8 @@ snapshots:
       yaml: 1.10.3
 
   country-flag-icons@1.6.16: {}
+
+  country-state-city@3.2.1: {}
 
   croner@10.0.1: {}
 
