@@ -13,10 +13,12 @@ import { redirectsConfig } from './redirect'
 import { auditFieldsConfig } from './audit'
 import { enhancedSidebarConfig } from './sidebar'
 import { multiTenantConfig } from './multi-tenant'
+import { contentFreezeConfig } from './contentFreezing'
 // import { shadcnUiConfig } from './shadcn-ui'
 // import comments from 'payload-plugin-comments'
 
 export const plugins: Plugin[] = [
+  contentFreezeConfig,
   multiTenantConfig,
   redirectsConfig,
   translatorConfig,

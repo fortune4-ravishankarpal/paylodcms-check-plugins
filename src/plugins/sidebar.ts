@@ -35,7 +35,7 @@ export const enhancedSidebarConfig = payloadEnhancedSidebar({
       type: 'tab',
       icon: 'Settings',
       label: { en: 'Settings' },
-      collections: ['users', 'roles', 'tenants'],
+      collections: ['users', 'roles', 'tenants', 'content-freeze-settings'],
       globals: ['header', 'footer'],
     },
   ],
