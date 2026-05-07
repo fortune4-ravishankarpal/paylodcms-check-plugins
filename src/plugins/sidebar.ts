@@ -1,5 +1,5 @@
 import { payloadEnhancedSidebar } from '@veiag/payload-enhanced-sidebar'
-import { checkIsAdminOrUserAdmin, checkIsSuperAdmin } from '@/access/isAdmin'
+import { checkIsSuperAdmin } from '@/access/isAdmin'
 let SideBarAccessViewChecker = ({ req, item }: any) => {
   if (!req.user) return false
 
@@ -13,9 +13,10 @@ let SideBarAccessViewChecker = ({ req, item }: any) => {
   }
 
   const role = req.user.role
-  const permissions = (typeof role === 'object' && role !== null && 'permissions' in role)
-    ? (role.permissions as string[]) || []
-    : []
+  const permissions =
+    typeof role === 'object' && role !== null && 'permissions' in role
+      ? (role.permissions as string[]) || []
+      : []
 
   const checkAccess = (slug: string) => {
     return permissions.some(
