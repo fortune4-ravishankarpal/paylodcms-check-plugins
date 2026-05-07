@@ -50,18 +50,20 @@ export const Posts: CollectionConfig<'posts'> = {
   admin: {
     defaultColumns: ['title', 'slug', 'updatedAt'],
     livePreview: {
-      url: ({ data, req }) =>
-        generatePreviewPath({
+      url: async ({ data, req }) =>
+        await generatePreviewPath({
           slug: data?.slug,
           collection: 'posts',
           req,
+          tenant: data?.tenant,
         }),
     },
-    preview: (data, { req }) =>
-      generatePreviewPath({
+    preview: async (data, { req }) =>
+      await generatePreviewPath({
         slug: data?.slug as string,
         collection: 'posts',
         req,
+        tenant: data?.tenant,
       }),
     useAsTitle: 'title',
     components: {
