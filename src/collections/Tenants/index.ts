@@ -1,7 +1,7 @@
 import type { CollectionConfig } from 'payload'
 import { Country } from 'country-state-city'
 import { authenticated } from '@/access/authenticated'
-import { isSuperAdmin } from '@/access/isAdmin'
+import { checkIsSuperAdmin, isSuperAdmin } from '@/access/isAdmin'
 
 const countryOptions = Country.getAllCountries().map((country) => ({
   label: country.name,
@@ -13,13 +13,14 @@ export const Tenants: CollectionConfig = {
   admin: {
     group: 'System',
     useAsTitle: 'name',
-    hidden: ({ user }) => !isSuperAdmin(user),
+    // @ts-ignore
+    hidden: ({ user }) => !checkIsSuperAdmin(user),
   },
   access: {
-    create: ({ req: { user } }) => isSuperAdmin(user),
-    delete: ({ req: { user } }) => isSuperAdmin(user),
+    create: ({ req: { user } }) => checkIsSuperAdmin(user),
+    delete: ({ req: { user } }) => checkIsSuperAdmin(user),
     read: authenticated,
-    update: ({ req: { user } }) => isSuperAdmin(user),
+    update: ({ req: { user } }) => checkIsSuperAdmin(user),
   },
   fields: [
     {
