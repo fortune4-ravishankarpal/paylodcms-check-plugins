@@ -14,6 +14,7 @@ import { auditFieldsConfig } from './audit'
 import { enhancedSidebarConfig } from './sidebar'
 import { multiTenantConfig } from './multi-tenant'
 import { contentFreezeConfig } from './contentFreezing'
+// import { centerSearch } from './centerSearch'
 // import { auditorConfig } from './auditor'
 // import { shadcnUiConfig } from './shadcn-ui'
 // import comments from 'payload-plugin-comments'
@@ -26,6 +27,7 @@ export const plugins: Plugin[] = [
   auditFieldsConfig,
   enhancedSidebarConfig,
   gatekeeperPluginConfig,
+  // centerSearch,
   // auditorConfig,
   // comments(),
   nestedDocsPlugin({
